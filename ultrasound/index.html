@@ -19,15 +19,35 @@ html {
   width: 100vw;
   height: 100vh;
 }
+.acknowledgement {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  max-width: min(520px, calc(100vw - 160px));
+  padding: 8px 10px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.88);
+  color: #52606d;
+  font-size: 13px;
+  line-height: 1.5;
+  backdrop-filter: blur(4px);
+}
 .markmap-dark {
   background: #27272a;
   color: white;
+}
+.markmap-dark .acknowledgement {
+  border-color: rgba(212, 212, 216, 0.24);
+  background: rgba(39, 39, 42, 0.82);
+  color: #e4e4e7;
 }
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.18/dist/katex.min.css">
 </head>
 <body>
 <svg id="mindmap"></svg>
+<div class="acknowledgement">致谢：超声部分的源笔记根据 soundadam 整理的复习资料改写。</div>
 <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.12/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/index.js"></script><script>((getMarkmap) => {
           window.WebFontConfig = {
             custom: {
